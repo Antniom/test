@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoodleGPT 3 - Quiz Intelligence</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 3D Canvas Background -->
+    <div id="eva-canvas"></div>
+
+    <!-- Speech Bubble -->
+    <div id="eva-bubble">Hello!</div>
+
+    <div class="content-wrapper">
+        <nav>
+            <div class="logo">MoodleGPT 3</div>
+            <ul class="nav-links">
+                <li><a href="#hero" data-i18n="nav_home">Home</a></li>
+                <li><a href="#workflow" data-i18n="nav_workflow">How it Works</a></li>
+                <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
+                <li><a href="#download" data-i18n="nav_download">Download</a></li>
+            </ul>
+            <div class="lang-picker">
+                <select id="language-picker">
+                    <option value="en">EN</option>
+                    <option value="pt">PT</option>
+                </select>
+            </div>
+        </nav>
+
+        <section id="hero">
+            <div class="hero-content">
+                <h1 data-i18n="hero_title">Quiz support that thinks with you.</h1>
+                <p data-i18n="hero_subtitle">MoodleGPT 3 blends a curated database of verified answers with your own
+                    Gemini API key.</p>
+                <a href="https://chromewebstore.google.com/detail/moodlegpt-pro/lppelbhdlnckdgefagkpdekdaggmbmen"
+                    target="_blank" class="btn" data-i18n="hero_cta">Download Extension</a>
+            </div>
+        </section>
+
+        <section id="workflow">
+            <h2 data-i18n="workflow_title" style="margin-bottom: 3rem; font-size: 2.5rem;">How MoodleGPT 3 answers in
+                milliseconds</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem;">01</div>
+                    <h3 data-i18n="step_1_title">1. Select Question</h3>
+                    <p data-i18n="step_1_desc">The extension recognizes Moodle questions and extracts text, even from
+                        drop-downs.</p>
+                </div>
+                <div class="feature-card">
+                    <div style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 1rem;">02</div>
+                    <h3 data-i18n="step_2_title">2. Local Check</h3>
+                    <p data-i18n="step_2_desc">Instantly checks the offline pack of 321 verified answers.</p>
+                </div>
+                <div class="feature-card">
+                    <div style="font-size: 3rem; color: var(--accent-color); margin-bottom: 1rem;">03</div>
+                    <h3 data-i18n="step_3_title">3. Gemini Fallback</h3>
+                    <p data-i18n="step_3_desc">If no local match, it uses your Gemini API key to find the answer.</p>
+                </div>
+                <div class="feature-card">
+                    <div style="font-size: 3rem; color: #fff; margin-bottom: 1rem;">04</div>
+                    <h3 data-i18n="step_4_title">4. Human Pacing</h3>
+                    <p data-i18n="step_4_desc">Waits a randomized 4-15 seconds before answering to mimic human behavior.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2 data-i18n="features_title" style="margin-bottom: 2rem; font-size: 2.5rem;">Built for real quiz pressure
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 data-i18n="feature_1_title">Stealth Automation</h3>
+                    <p data-i18n="feature_1_desc">Auto-solves true/false and gap-select questions with human-like
+                        randomized delays.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature_2_title">Keyboard-First UX</h3>
+                    <p data-i18n="feature_2_desc">Alt+C fetches answers, Alt+A applies them. Stay in flow without
+                        touching the mouse.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature_3_title">Privacy Focused</h3>
+                    <p data-i18n="feature_3_desc">API keys and logs stay in local storage. Nothing is sent to the cloud
+                        unless you ask.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature_4_title">Opacity Control</h3>
+                    <p data-i18n="feature_4_desc">Adjust answer visibility with the slider or Alt± hotkeys to stay
+                        discreet.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature_5_title">Context Menu</h3>
+                    <p data-i18n="feature_5_desc">Highlight text and 'Check QA' to see matches inline without leaving
+                        the page.</p>
+                </div>
+                <div class="feature-card">
+                    <h3 data-i18n="feature_6_title">Error Insights</h3>
+                    <p data-i18n="feature_6_desc">Detailed error logging helps you troubleshoot issues quickly.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing">
+            <h2 data-i18n="pricing_title" style="margin-bottom: 2rem; font-size: 2.5rem;">Simple one-time pricing</h2>
+            <div class="features-grid" style="display: flex; justify-content: center;">
+                <div class="feature-card"
+                    style="border-color: var(--secondary-color); box-shadow: 0 0 30px rgba(0, 206, 201, 0.15); max-width: 500px; width: 100%; text-align: center;">
+                    <h3 data-i18n="pricing_pro_title" style="font-size: 2rem; margin-bottom: 1rem;">Lifetime License
+                    </h3>
+                    <p class="price"
+                        style="font-size: 4rem; color: var(--secondary-color); font-weight: 700; margin-bottom: 0.5rem;"
+                        data-i18n="pricing_pro_price">$8</p>
+                    <p data-i18n="pricing_pro_desc" style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">
+                        One-time payment via BrowserBill</p>
+                    <ul
+                        style="list-style: none; margin: 0 auto; text-align: left; display: inline-block; opacity: 0.8; line-height: 2;">
+                        <li style="display: flex; align-items: center; gap: 10px;"><span
+                                style="color: var(--secondary-color);">✓</span> <span
+                                data-i18n="pricing_pro_note">Unlocks automation & Gemini fallback</span></li>
+                        <li style="display: flex; align-items: center; gap: 10px;"><span
+                                style="color: var(--secondary-color);">✓</span> <span>321 Verified Answers Pack</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px;"><span
+                                style="color: var(--secondary-color);">✓</span> <span>Opacity Controls & Hotkeys</span>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 10px;"><span
+                                style="color: var(--secondary-color);">✓</span> <span>Free Future Updates</span></li>
+                    </ul>
+                    <div style="margin-top: 2rem;">
+                        <a href="https://chromewebstore.google.com/detail/moodlegpt-pro/lppelbhdlnckdgefagkpdekdaggmbmen"
+                            target="_blank" class="btn"
+                            style="background: var(--secondary-color); color: #000; padding: 1rem 3rem;">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download">
+            <h2 data-i18n="download_title" style="margin-bottom: 2rem; font-size: 2.5rem;">Get MoodleGPT 3</h2>
+            <div style="display: flex; gap: 1rem;">
+                <a href="https://chromewebstore.google.com/detail/moodlegpt-pro/lppelbhdlnckdgefagkpdekdaggmbmen"
+                    target="_blank" class="btn">Chrome Web Store</a>
+            </div>
+        </section>
+
+        <footer>
+            <p data-i18n="footer_rights">© 2024 MoodleGPT. All rights reserved.</p>
+            <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.7;" data-i18n="support_email">Support:
+                moodlegpt.help@gmail.com</p>
+        </footer>
+    </div>
+
+    <script type="module" src="eva-assistant.js"></script>
+</body>
+
+</html>
